@@ -76,7 +76,7 @@ func (zcc *zapCtxCore) Write(entry zapcore.Entry, fields []zapcore.Field) error 
 
 	span := trace.SpanFromContext(zcc.context)
 	if !span.IsRecording() {
-		return nil
+		return zcc.core.Write(entry, fields)
 	}
 
 	// add trace info to logging fields
