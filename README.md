@@ -1,0 +1,1 @@
+# Example go.uber.org/zap logger integration with jaeger/opentelemetry span logs
